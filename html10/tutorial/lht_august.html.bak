@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      New Perspectives on HTML5 and CSS3, 7th Edition
+      Tutorial 10
+      Tutorial Case
+
+      Lyman Hall Theater August Schedule
+      Author: Benjamin Evans 
+      Date: 2/6/2023  
+
+      Filename:   lht_august.html
+
+   -->
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Lyman Hall Theater in August</title>
+   <link href="lht_base.css" rel="stylesheet" />
+   <link href="lht_layout.css" rel="stylesheet" /> 
+   <link href="lht_calendar.css" rel="stylesheet" /> 
+   <script src ="lht_events.js" defer></script>
+   <script src ="lht_calendar.js" defer></script>
+</head>
+
+<body>
+<form id="register" method="post" action="">
+     <select id="select_state">
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="CA">California</option>
+          <option value="FL">Florida</option>
+     </select>
+</form>
+
+<script>
+
+//this eventListener calls the checkValue function when the page is loaded
+window.addEventListener("load", checkValue);
+
+//checkValue function
+function checkValue()
+{
+     document.getElementById("select_state").onchange = alertValue;
+}
+
+function alertValue()
+{
+    var index = document.getElementById("select_state").selectedIndex;
+	var state = document.getElementById("select_state").value;
+	window.alert(state, index);
+	
+	}
+	</script>
+   </body>
+
+</html>
