@@ -1,0 +1,99 @@
+
+
+<!DOCTYPE HTML>
+<html lang="en"> 
+  <head>
+     <meta charset="UTF-8">
+    <title>Census Form</title>
+   <style>
+   label{
+  font-size:25px;
+  
+}
+
+div{
+  padding-top: 20px;
+  
+}
+   </style>
+  </head>
+<h1 id="title">Census Survey Form</h1>
+<p id = "description">Please fill out this form</p>
+<form id="survey-form">
+  <div>
+    <label id="name-label">Name
+      <input id="name" type="text" placeholder = "your name here" required>
+    </label>
+  </div>
+  <div>
+    <label id="email-label">Email
+      <input id="email" type="email" placeholder= "example@example.com"required>
+    </label>
+  </div>
+  <div>
+    <label id="number-label">Age
+      <input id="number" type="number" min="13" max="120" placeholder = "age" required>
+    </label>
+  </div>
+
+  <div>
+    <label id = "Education"> Education Level
+    <select id ="dropdown">
+      <option>HighSchool Diploma or G.E.D</option>
+      <option>Under-Graduate Degree</option>
+      <option>Post-Graduate Degree</option>
+      <option>Phd</option>
+
+
+
+    </select>
+    </label>
+  </div>
+
+  <h2> Race or Ethnicity</h2>
+
+  <div>
+    <label id="rl1">
+      <input type = "radio" name="rg" value="Caucasian">
+    </label> Caucasian 
+  </div>
+  <div>
+    <label id="rl2">
+      <input type = "radio" name="rg" value="Hispanic">
+    </label> Hispanic
+  </div>
+  <div>
+    <label id="rl3">
+      <input type = "radio" name="rg" value="African American">
+    </label> African American
+  </div>
+  <div>
+    <label id="rl4">
+      <input type = "radio" name="rg" value="Asian">
+    </label> Asian
+  </div>
+  <div>
+    <label> 
+      <input type ="checkbox" value ="married">
+    </label> Married
+     <label> 
+      <input type ="checkbox" value ="single">
+    </label> Single
+
+  </div>
+  <div>
+    <textarea rows="10" cols="30" placeholder ="add any additional comments about yourself..." ></textarea>
+  </div>
+  <div>
+    <button id = "submit" type = "submit">Submit</button>
+  </div>
+
+
+</form>
+
+
+
+
+
+
+
