@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+      <meta charset="UTF-8" />
+    <title>Java Technical Documentation Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <main id="main-doc">
+    <section id = "Introduction" class="main-section">
+      <header>Introduction</header>
+        <p>Java is a programming language and computing platform first released by Sun Microsystems in 1995. It has evolved from humble beginnings to power a large share of today’s digital world, by providing the reliable platform upon which many services and applications are built. New, innovative products and digital services designed for the future continue to rely on Java, as well.
+
+</p>
+        <p>While most modern Java applications combine the Java runtime and application together, there are still many applications and even some websites that will not function unless you have a desktop Java installed. Java.com, this website, is intended for consumers who may still require Java for their desktop applications – specifically applications targeting Java 8. Developers as well as users that would like to learn Java programming should visit the dev.java website instead and business users should visit oracle.com/java for more information.</p>
+       
+    </section>
+    <section id="Variables" class="main-section">
+      <header>Variables</header>
+        <p>Java variables are containers for storing data values, and they play a central role in Java programming. Variables in Java are strongly typed, meaning the type of data a variable can hold is explicitly declared and enforced at compile time. Each variable has a specific data type, such as int for integers, double for floating-point numbers, char for single characters, and String for sequences of characters. Declaring a variable requires specifying its type, followed by a name, and optionally initializing it with a value. For instance, int age = 25; declares an integer variable named age and assigns it the value of 25. Java also supports other types like boolean, arrays, and custom objects, offering flexibility in managing data.</p>
+        <p>Variables in Java are categorized into different types based on their scope and usage. Local variables are declared within a method and are only accessible within that method. Instance variables, on the other hand, are declared inside a class but outside any method, and they belong to a specific object instance. Static variables, declared with the static keyword, are shared among all instances of a class. Proper use of variables involves following naming conventions, initializing variables before use, and selecting the appropriate type and scope to ensure clarity and efficiency in your code. Understanding these aspects of Java variables is fundamental for writing robust and maintainable programs.
+
+
+
+
+
+
+</p>
+        <code>The General Syntax for defining variables in Java is as follows:<br> type variableName = value;
+</code>
+        
+    </section>
+    <section id="if/else" class="main-section">
+      <header>if/else</header>
+       <p>if-else statements in Java are fundamental control flow constructs used to execute different blocks of code based on specific conditions. They start with an if condition, which is a Boolean expression that evaluates to either true or false. If the condition evaluates to true, the code block inside the if statement is executed. If it evaluates to false, the code can optionally execute an else block. This construct allows developers to write programs that can make decisions and behave dynamically based on runtime inputs or computations. For example, an if statement can check if a user-provided number is positive and display an appropriate message.</p>
+      <p>Additionally, Java supports the use of multiple conditional branches using else if statements. This is particularly useful when you need to evaluate several conditions sequentially. The program will execute the first block of code whose condition evaluates to true, skipping the rest. If none of the conditions are satisfied, the optional else block can serve as a fallback. This hierarchy ensures clarity and precision in decision-making logic. When constructing if-else statements, it's crucial to maintain proper indentation and braces for readability and to avoid logical errors. This structure makes Java a powerful language for writing robust, decision-driven applications.</p>
+    
+<br>
+      <code> 
+        This Example Checks to to see if a number is positive or negative        
+        public class Main {
+    public static void main(String[] args) {
+        int number = -5;
+
+        if (number >= 0) {
+            System.out.println("The number is positive.");
+        } else {
+            System.out.println("The number is negative.");
+        }
+    }
+}
+
+</code>
+    </section>
+    <section id= "while" class="main-section">
+      <header>while</header>
+       <p>In Java, a while loop is a control flow statement that allows code to be executed repeatedly based on a given boolean condition. The loop checks the condition before executing the block of code, making it a pre-test loop. If the condition evaluates to true, the loop's body is executed; this process repeats until the condition becomes false. 
+
+
+
+
+</p>
+      <p>The syntax for a while loop is straightforward: while (condition) { // code to be executed }. Properly managing the condition and ensuring it eventually becomes false is crucial to avoid infinite loops. While loops are particularly useful when the number of iterations is not known in advance but depends on dynamic runtime conditions.
+
+</p>
+     
+     
+      <code>public class Main {
+    public static void main(String[] args) {
+        int number = 1; // Initialize the starting number
+
+        // While loop to print numbers from 1 to 5
+        while (number <= 5) {
+            System.out.println("Number: " + number); // Print the current number
+            number++; // Increment the number by 1
+        }
+    }
+}
+</code>
+    
+      <h2> Additional types of loops include:</h2>
+     
+      <li>Similar to the while loop, The do-while loop in Java executes a block of code at least once before checking its condition, ensuring the loop body runs regardless of the condition's initial truth value. After the first execution, the condition is evaluated, and the loop continues if the condition remains true.</li> <code>public class Main {
+    public static void main(String[] args) {
+        int number = 1; // Initialize the starting number
+
+        // Do-while loop to print numbers from 1 to 5
+        do {
+            System.out.println("Number: " + number); // Print the current number
+            number++; // Increment the number by 1
+        } while (number <= 5); // Check the condition after executing the loop body
+    }
+}
+</code>
+      <li>The for loop in Java is a control structure used to execute a block of code repeatedly for a specified number of iterations, with initialization, condition checking, and increment/decrement all defined in the loop header.</li>
+      <code>public class Main {
+    public static void main(String[] args) {
+        // For loop to print numbers from 1 to 5
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Number: " + i); // Print the current number
+        }
+    }
+}
+</code>
+      <li>The for-each loop in Java is a simplified version of the for loop, designed to iterate over elements in a collection or array without needing an explicit index.</li>
+      <code>public class Main {
+    public static void main(String[] args) {
+        // Array of numbers
+        int[] numbers = {1, 2, 3, 4, 5};
+
+        // For-each loop to iterate through the array
+        for (int num : numbers) {
+            System.out.println("Number: " + num); // Print each number
+        }
+    }
+}
+</code>
+    </section>
+    <section  id="Functions" class="main-section">
+      <header>Functions</header>
+       <p>Java functions, also known as methods, are fundamental building blocks in Java programming. They encapsulate a set of instructions to perform a specific task and can be reused throughout the program, making the code modular and easier to maintain. Methods in Java are defined within a class and consist of a method signature and a method body. The signature includes the method's access modifier (e.g., public, private), return type (e.g., void if the method doesn't return anything), method name, and optional parameters enclosed in parentheses. The method body, enclosed in curly braces, contains the logic or instructions to be executed when the method is called. Methods can either be standard instance methods, which require an object to invoke them, or static methods, which belong to the class and can be called directly using the class name.</p>
+      <p>Java functions enhance code readability and reusability by enabling developers to divide complex tasks into smaller, manageable parts. They support features like method overloading, which allows multiple methods in the same class to have the same name but different parameter lists, enabling polymorphism. Additionally, Java supports recursive methods, where a method can call itself to solve problems such as factorials or Fibonacci sequences. By following best practices like meaningful naming and keeping methods focused on a single task, developers can create efficient and maintainable Java programs. Proper usage of methods not only improves code clarity but also simplifies debugging and testing processes.</p>
+      <code>public class Main {
+    // Method to calculate the square of a number
+    public static int calculateSquare(int number) {
+        return number * number; // Return the square of the number
+    }
+
+    public static void main(String[] args) {
+        int input = 5; // Example input
+        int result = calculateSquare(input); // Call the method and store the result
+
+        // Print the result
+        System.out.println("The square of " + input + " is: " + result);
+    }
+}
+</code>
+<h2>To Summarize Java Functions:</h2>
+      <li>Definition and Structure: Functions in Java, known as methods, consist of a signature (access modifier, return type, name, and parameters) and a body, encapsulating reusable blocks of code for specific tasks.</li>
+      <li>Types: Java supports instance methods (called on objects), static methods (called on the class), and special methods like constructors for object initialization.</li>
+      <li>Features: Methods enable code modularity, support overloading for polymorphism, and can be recursive to solve problems involving repetitive logic.</li>
+    </section>
+    <nav id="navbar">
+      <header>Java Documentation</header>
+      <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li><a class="nav-link" href="#Variables">Variables</a></li>
+     <li> <a class="nav-link" href="#if/else">if/else</a></li>
+     <li> <a class="nav-link" href="#while">while</a></li>
+     <li> <a class="nav-link" href="#Functions">Functions</a><li>
+    </ul>
+    </nav>
+  </main>
+</html>
+<style>
+html,
+body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: black;
+}
+
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+section article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  max-width: 50%;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+  }
+}
+h2{
+  font-size: 1.5em;
+  font-family: 'Open Sans', Arial, sans-serif;
+   color: #4d4e53;
+}
+
+#navbar header{
+  text-align: center;
+}
+
+</style>
+
